@@ -31,11 +31,16 @@ use Illuminate\Support\Facades\Route;
 // ReturnView akan menampilkan sebuah halaman yang ada pada folder views
 
 Route::get('/', function () {
-    return view ('home');
+    return view ('home', [
+        "title" => "Home",
+        "image" => "kazuha jpg.jpg",
+        "description" => "Kazuha is a polite and well spoken individual. Compared to other noble Inazuman clan members, Kazuha prefers going out and travelling rather than staying put indoors, something that the seizure of his clan home let him do due to a lack of wealth and duty. He roamed Inazuma peacefully as a modest wanderer for a good portion of his life, teaching himself bladework and picking up other skills, never seeking luxury. "
+    ]);
 });
 
 Route::get('/about', function () {
     return view ('about', [
+        "title" => "About",
         "name" => "Kaedehara Kazuha",
         "description" => "Genshin Impact Character - Anemo",
         "image" => "kazuha.png"
@@ -43,5 +48,7 @@ Route::get('/about', function () {
 });
 
 Route::get('/gallery', function () {
-    return view ('gallery');
+    return view ('gallery', [
+        "title" => "Gallery"
+    ]);
 });

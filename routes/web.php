@@ -32,7 +32,7 @@ use App\Http\Controllers\ContactController;
 // ReturnView akan menampilkan sebuah halaman yang ada pada folder views
 
 Route::get('/', function () {
-    return view ('home', [
+    return view ('index', [
         "title" => "Home",
         "image" => "kazuha jpg.jpg",
         "description" => "Kazuha is a polite and well spoken individual. Compared to other noble Inazuman clan members, Kazuha prefers going out and travelling rather than staying put indoors, something that the seizure of his clan home let him do due to a lack of wealth and duty. He roamed Inazuma peacefully as a modest wanderer for a good portion of his life, teaching himself bladework and picking up other skills, never seeking luxury. "
@@ -55,3 +55,8 @@ Route::get('/gallery', function () {
 });
 
 Route::resource('/contact', ContactController::class);
+Auth::routes();
+
+Route::group(['middleware' => ['auth']], function(){
+    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+});

@@ -34,7 +34,7 @@ use App\Http\Controllers\ContactController;
 Route::get('/', function () {
     return view ('index', [
         "title" => "Home",
-        "image" => "kazuha jpg.jpg",
+        "image" => "kazuha jpg.jpg')}}",
         "description" => "Kazuha is a polite and well spoken individual. Compared to other noble Inazuman clan members, Kazuha prefers going out and travelling rather than staying put indoors, something that the seizure of his clan home let him do due to a lack of wealth and duty. He roamed Inazuma peacefully as a modest wanderer for a good portion of his life, teaching himself bladework and picking up other skills, never seeking luxury. "
     ]);
 });
@@ -44,7 +44,7 @@ Route::get('/about', function () {
         "title" => "About",
         "name" => "Kaedehara Kazuha",
         "description" => "Genshin Impact Character - Anemo",
-        "image" => "kazuha.png"
+        "image" => "kazuha.png')}}"
     ]);
 });
 

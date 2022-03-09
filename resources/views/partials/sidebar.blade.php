@@ -26,8 +26,8 @@
                             </ul>
                         </li>
                         <li>
-                            <a href="chart.html">
-                                <i class="fas fa-chart-bar"></i>Charts</a>
+                            <a href="{{ route('contact.index') }}">
+                                <i class="fas fa-chart-bar"></i>Data Contacts Us</a>
                         </li>
                         <li>
                             <a href="table.html">

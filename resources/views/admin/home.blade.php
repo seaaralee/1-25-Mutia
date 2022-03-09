@@ -1,5 +1,5 @@
 @extends('layouts.app')
-@section('title', 'Tristan | Dashboard')
+@section('title', 'Mutia | Dashboard')
 @section('content')
 <div class="main-content">
                 <div class="section_content section_content--p30">
@@ -11,7 +11,6 @@
                                 </div>
                             </div>
                         </div>
-                        
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="copyright">
